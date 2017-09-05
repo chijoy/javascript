@@ -1,0 +1,26 @@
+<script>
+  // display a question and multiple choice answers to the user
+  // provide a confirmation on mouseclick
+
+  function answer(answer)
+  {
+    if(answer=="c")
+      {
+      document.getElementById("result").innerHTML = "<h1>Correct!</h1>";
+      document.getElementById("continue").innerHTML = "<h1>Next</h1>";
+    }else
+    {
+      document.getElementById("result").innerHTML = "<h1>Sorry, incorrect! Try again.</h1>";
+    }
+  }
+
+  document.write("<div id='result'></div>");
+  document.write("<h2>Please click the correct answer.</h2>");
+  document.write("<strong>What is the capitol of Illinois?</strong>");
+  document.write("<br><span id='answerA' onclick=answer('a')>a. Chicago </span>");
+  document.write("<br><span id='answerB' onclick=answer('b')>b. Evanston </span>");
+  document.write("<br><span id='answerC' onclick=answer('c')>c. Springfield </span>");
+  document.write("<br><span id='answerD' onclick=answer('d')>d. None of the above </span>");
+  document.write("<div id='continue'></div>");
+
+</script>
